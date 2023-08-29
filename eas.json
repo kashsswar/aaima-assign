@@ -1,0 +1,23 @@
+{
+    "cli": {
+      "version": ">= 0.36.0"
+    },
+    "build": {
+      "development": {
+        "env": {
+          "API_URL": "https://api.develop.example.com"
+        }
+      },
+      "staging": {
+        "env": {
+          "API_URL": "https://api.staging.example.com"
+        }
+      },
+      "production": {
+        "env": {
+          "API_URL": "https://api.production.example.com"
+        }
+      }
+    }
+  }
+  

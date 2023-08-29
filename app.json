@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "MyProject",
+    "displayName": "My Project",
+    "slug": "my-project",
+    "privacy": "public",
+    "sdkVersion": "43.0.0", 
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "platforms": ["ios", "android"],
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "extra": {
+      "environment": {
+        "API_URL": {
+          "develop": "https://api.develop.example.com",
+          "staging": "https://api.staging.example.com",
+          "production": "https://api.production.example.com"
+        }
+      }
+    },
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "your-sentry-organization",
+            "project": "your-sentry-project",
+            "authToken": "your-sentry-auth-token"
+          }
+        }
+      ]
+    }
+  }
+}
